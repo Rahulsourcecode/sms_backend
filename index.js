@@ -16,7 +16,7 @@ const app = express()
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://schoolmanagementsystem-ou8d.onrender.com",
 }));
 
 app.use(express.static('public'));
