@@ -31,7 +31,7 @@ app.use('/teachers', teacherRouter);
 app.use('/students', studentRouter);
 app.use("/messages", messageRouter);
 app.use("/general", generalRouter);
-app.use("/school",schoolRouter);
+app.use("/school", schoolRouter);
 
 const server = app.listen(process.env.PORT, async () => {
     try {
@@ -46,7 +46,7 @@ const server = app.listen(process.env.PORT, async () => {
 
 const io = socket(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://schoolmanagementsystem-ou8d.onrender.com",
         credentials: true,
     },
 });
