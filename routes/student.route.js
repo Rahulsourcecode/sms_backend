@@ -7,18 +7,18 @@ const router = express.Router();
 //students login
 router.post("/login", studentLogin)
 
-router.patch("/:studentId", authenticate, editStudent)
+router.patch("/:studentId",  editStudent)
 
-router.delete("/:studentId", authenticate, deleteStudent)
+router.delete("/:studentId",  deleteStudent)
 //fetch ProfileImage
-router.post("/fetchimage", authenticate, fetchImage)
+router.post("/fetchimage",  fetchImage)
 
-router.get("/listteachers", authenticate, getTeachers)
+router.get("/listteachers",  getTeachers)
 
-router.post("/submitFeedback", authenticate, submitFeedback)
+router.post("/submitFeedback",  submitFeedback)
 
-router.post("/attendance", authenticate, fetchAttendance)
+router.post("/attendance",  fetchAttendance)
 
-router.post("/marks", authenticate, fetchMarks)
+router.post("/marks",  fetchMarks)
 
 module.exports = router;

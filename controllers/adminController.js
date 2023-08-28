@@ -296,7 +296,7 @@ const feebackList = async (req, res) => {
             return res.status(400).json({ message: "error" })
         }
         console.log(list)
-        return res.send(list).status(200).json({ message: "success" })
+        return res.status(200).json({ data: list, message: "success" })
     } catch (error) {
         return res.status(404).jsnon({ message: "error" })
     }

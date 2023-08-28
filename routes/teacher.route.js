@@ -13,26 +13,26 @@ router.post('/login', teacherLogin)
 //register a teacher
 router.post("/register", uploads.single('image'), teacherRegister)
 //edit profile
-router.patch("/:teacherId",authenticate, editTeacher)
+router.patch("/:teacherId", editTeacher)
 //students on a class of class teacher
-router.post("/findStudents",authenticate, findStudents)
+router.post("/findStudents", findStudents)
 //upload marks
-router.post("/setMarks",authenticate, uploadmark)
+router.post("/setMarks", uploadmark)
 //show class students
-router.post("/classStudnets",authenticate, classStudents)
+router.post("/classStudnets", classStudents)
 //show attendance data
-router.post("/attendancedata",authenticate, getAttendanceData)
+router.post("/attendancedata", getAttendanceData)
 //mark attendance
-router.post('/markattendance',authenticate, markAttendance)
+router.post('/markattendance', markAttendance)
 //find Students
-router.get("/datelist",authenticate, attendateMarkedDates)
+router.get("/datelist", attendateMarkedDates)
 
 //apply leave
-router.post('/applyleave',authenticate, applyLeave)
+router.post('/applyleave', applyLeave)
 
-router.post('/leavestatus',authenticate, leaveStatus)
+router.post('/leavestatus', leaveStatus)
 //fetch profile image
-router.post("/fetchimage",authenticate, fetchImage)
+router.post("/fetchimage", fetchImage)
 
 router.delete("/:teacherId", async (req, res) => {
   const id = req.params.teacherId;
